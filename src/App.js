@@ -16,6 +16,8 @@ import TemplateModule from './TemplateModule';
 import Transfer from './Transfer';
 import Upgrade from './Upgrade';
 
+import Kitties from './Kitties';
+
 function Main () {
   const [accountAddress, setAccountAddress] = useState(null);
   const { apiState, keyring, keyringState, apiError } = useSubstrate();
@@ -76,6 +78,9 @@ function Main () {
             <TemplateModule accountPair={accountPair} />
           </Grid.Row>
         </Grid>
+        <Grid.Row>
+          <Kitties accountPair={accountPair} />
+        </Grid.Row>
       </Container>
       <DeveloperConsole />
     </div>
